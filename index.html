@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tastee Treats</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <!--===============|| CSS ||===============-->
     <link rel="stylesheet" href="css/style.css" />
     <!--===============|| CSS LINK ||===============-->
@@ -17,5 +18,34 @@
     <!--===============|| JAVASCRIPT ||===============-->
     <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header id="header">
+      <div class="container">
+        <!--===============|| NAVBAR ||===============-->
+        <nav id="nav" class="nav flex-center">
+          <!--Logo-->
+          <a href="index.html" class="logo"> Tastee <span>Treats</span> </a>
+          <!--Nav Links Container-->
+          <div class="nav-links-container">
+            <ul class="nav-links flex-center">
+              <li><a href="/" class="nav-link active">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#menu" class="nav-link">Menu</a></li>
+              <li><a href="#events" class="nav-link">Events</a></li>
+              <li><a href="#chefs" class="nav-link">Chefs</a></li>
+              <li><a href="#contacts" class="nav-link">Contacts</a></li>
+            </ul>
+          </div>
+          <!-- Booking -->
+          <div class="btn-container flex-center">
+            <a href="#" class="btn nav-btn">Book A Table</a>
+            <!-- Hemburger Menu -->
+            <div class="nav-toggle flex-center">
+              <span></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
