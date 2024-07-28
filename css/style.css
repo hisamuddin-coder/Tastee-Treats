@@ -496,14 +496,14 @@ h5 {
   text-align: center;
   margin-bottom: 1rem;
 }
-.menu-btn-container {
+.filter-btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 1rem;
 }
-.menu-btn {
+.filter-btn {
   color: #3c3d3e;
   font-size: 1.1rem;
   background-color: transparent;
@@ -512,8 +512,8 @@ h5 {
   border-bottom: 2px solid #3c3d3e;
   padding: 0.5rem;
 }
-.menu-btn.active,
-.menu-btn:hover {
+.filter-btn.active,
+.filter-btn:hover {
   color: #ce1212;
   border-color: #ce1212;
 }
@@ -526,10 +526,13 @@ h5 {
   text-align: center;
 }
 .menu-item img {
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   margin: auto;
+  margin-bottom: 10px;
 }
 .menu-item h5 {
   color: #212529;
@@ -560,4 +563,80 @@ h5 {
     grid-template-columns: 1fr;
     gap: 3rem 2rem;
   }
+}
+/*==== || TESTIMONIALS || ====*/
+.testimonials {
+  background-color: #f2f2f2;
+  padding: 2.5rem;
+}
+.testimonial-slider {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+.testimonial-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 400ms ease;
+}
+.slider-btn {
+  color: #545353;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+.slider-btn-prev {
+  left: 0;
+}
+.slider-btn-next {
+  right: 0;
+}
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.testimonial-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.testimonial-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.testimonial-item p {
+  width: 75%;
+  margin: auto;
+  color: #545353;
+}
+.testimonial-item h3 {
+  color: #545353;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+.testimonial-item .author-profile {
+  display: block;
+  color: #545353;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.stars {
+  display: block;
+  font-size: 14px;
 }
