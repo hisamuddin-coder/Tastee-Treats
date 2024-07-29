@@ -43,11 +43,16 @@ p {
   align-items: center;
   justify-content: center;
 }
+.section-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.section-bg {
+  background-color: #f2f2f2;
+}
 .section-pd {
   padding: 5rem 0;
-}
-.col {
-  flex: 1;
 }
 .offscreen {
   display: none;
@@ -59,7 +64,7 @@ p {
 }
 .section-sub-title {
   display: block;
-  color: red;
+  color: #9e9e9e;
   font-size: 1rem;
   letter-spacing: 1.1px;
   text-transform: uppercase;
@@ -70,7 +75,7 @@ p {
   font-family: "Playwrite BE VLG", cursive;
 }
 .section-title span {
-  color: red;
+  color: #ce1212;
 }
 /*==== || NAVBAR || ====*/
 #header {
@@ -227,11 +232,17 @@ p {
   height: 100vh;
 }
 .hero-wrapper {
-  justify-content: space-between;
+  align-items: center;
   padding-top: 80px;
   gap: 5rem;
 }
+.hero-content {
+  flex: 1;
+  align-items: normal;
+  flex-direction: column;
+}
 .hero-showcase {
+  flex: 1;
   justify-content: flex-end;
 }
 .hero-showcase img {
@@ -248,6 +259,9 @@ p {
 .hero-desc {
   margin-bottom: 1.5rem;
   width: 80%;
+}
+#hero .btn-container {
+  justify-content: flex-start;
 }
 @media screen and (max-width: 992px) {
   #hero {
@@ -304,24 +318,27 @@ p {
   gap: 2rem;
   align-items: normal;
 }
-.col-left {
-  min-width: 60%;
+.about-cta {
+  flex: 7;
   background-color: #ce1212;
   background-image: url(/images/about-1.jpg);
   background-size: cover;
   position: relative;
 }
-.call-us {
+.about-content {
+  flex: 5;
+}
+.about-cta-num {
   width: 70%;
   background-color: #fff;
   padding: 3rem 0;
   text-align: center;
   position: absolute;
-  bottom: 80px;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
 }
-.call-us span {
+.about-cta-num span {
   display: block;
   color: #212529;
   font-size: 1.5rem;
@@ -329,7 +346,7 @@ p {
   letter-spacing: 1.1px;
   margin-bottom: 0.5rem;
 }
-.call-us span:last-child {
+.about-cta-num span:last-child {
   color: #ce1212;
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -367,87 +384,34 @@ p {
   #about .about-wrapper {
     flex-direction: column;
   }
-  .col-left {
-    height: 500px;
+  .about-cta {
+    min-height: 400px;
   }
 }
 @media screen and (max-width: 768px) {
-  .col-left {
-    height: 400px;
+  .about-cta {
+    height: 300px;
   }
-  .call-us {
-    bottom: 30px;
+  .about-cta-num {
+    bottom: 20px;
+    padding: 1rem;
   }
-  .call-us span {
+  .about-cta-num span {
     font-size: 1.25rem;
   }
-  .call-us span:last-child {
+  .about-cta-num span:last-child {
     font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 548px) {
-  .col-left {
-    height: 300px;
-  }
-  .call-us {
-    bottom: 20px;
+  .about-cta-num {
+    width: 90%;
   }
   .call-us span {
     font-size: 1.15rem;
   }
   .call-us span:last-child {
     font-size: 1.5rem;
-  }
-}
-/*==== || WHY US || ====*/
-.why-us-wrapper {
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.card {
-  color: #fff;
-  background-color: #ce1212;
-  padding: 2rem;
-}
-.cards {
-  flex: 8;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-h3 {
-  color: #fff;
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-}
-.why-us .btn-container {
-  justify-content: center;
-}
-.why-us .btn {
-  background-color: hsl(0, 55%, 60%);
-}
-.box-item {
-  text-align: center;
-  background-color: var(--color-white);
-  padding: 2rem;
-  transition: var(--transition-1);
-}
-.box-item h4 {
-  color: var(--color-default);
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: 1.25rem;
-}
-.box-item:hover {
-  transform: scale(1.025);
-}
-@media (max-width: 992px) {
-  .why-us-wrapper {
-    flex-direction: column;
-  }
-  .box-2 {
-    width: 100%;
   }
 }
 /*==== || STATS || ====*/
@@ -459,8 +423,7 @@ h3 {
   background-size: cover;
   background-position: center;
 }
-.section-center {
-  display: grid;
+#stats .section-center {
   grid-template-columns: repeat(4, 1fr);
 }
 .stat {
@@ -518,7 +481,6 @@ h5 {
   border-color: #ce1212;
 }
 .menu-items {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem 1rem;
 }
@@ -567,7 +529,7 @@ h5 {
 /*==== || TESTIMONIALS || ====*/
 .testimonials {
   background-color: #f2f2f2;
-  padding: 2.5rem;
+  padding: 2.5rem 0;
 }
 .testimonial-slider {
   position: relative;
@@ -582,7 +544,6 @@ h5 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: all 400ms ease;
 }
 .slider-btn {
   color: #545353;
@@ -637,6 +598,125 @@ h5 {
   font-weight: 600;
 }
 .stars {
+  font-size: 14px;
+}
+/*==== || EVENTS || ====*/
+.event-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+.card img {
+  aspect-ratio: 5/6;
+  object-fit: cover;
+}
+.event-card {
+  position: relative;
+}
+.event-card-desc {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card-title {
+  font-size: 1.45rem;
+  margin-bottom: 0.25rem;
+}
+.price {
+  margin-bottom: 0.25rem;
+}
+.event-card-desc p {
+  color: #fff;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 992px) {
+  .event-cards {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    max-height: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+/*==== || CHEFS || ====*/
+.chef-card {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  transition: all 300ms ease;
+}
+.img-container {
+  position: relative;
+}
+.img-container img {
+  aspect-ratio: 5/4;
+}
+.chef-img::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  z-index: 1;
+}
+.social {
+  color: rgb(100, 100, 100);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+.social i {
+  font-size: 18px;
+  color: rgb(100, 100, 100);
+  margin-bottom: 5px;
+}
+.chef-info {
+  padding: 10px 15px 20px 15px;
+}
+.chef-info span {
   display: block;
   font-size: 14px;
+  font-weight: 400;
+  color: rgba(33, 37, 41, 0.4);
+}
+.chef-info p {
+  color: rgba(33, 37, 41, 0.7);
+  font-size: 14px;
+  font-style: italic;
+  padding-top: 15px;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.chef-card:hover .social {
+  right: 5%;
+  opacity: 1;
+}
+.chef-card:hover {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 992px) {
+  .chef-cards {
+    grid-template-columns: 1fr;
+  }
 }
